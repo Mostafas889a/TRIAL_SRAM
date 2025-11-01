@@ -1,0 +1,11 @@
+     0.00ns INFO     cocotb                              [caravel] start powering up
+   225.00ns INFO     cocotb                              [caravel] power up -> connect vdd
+   225.00ns INFO     cocotb                              [caravel] power up -> connect vcc
+   475.00ns INFO     cocotb                              [caravel] disable housekeeping SPI transmission
+   525.00ns INFO     cocotb                              [caravel] start resetting
+  1050.00ns INFO     cocotb                              [caravel] finish resetting
+  1325.00ns INFO     cocotb                             [TEST] Start multi-bank test (same word address in each bank)
+  1325.00ns INFO     cocotb                              [caravel] release housekeeping SPI transmission
+  1350.00ns INFO     cocotb                             [TEST] Wait for GPIO pulse indicating test start
+342050.00ns INFO     cocotb                             [TEST] Test started - testing bank addressing
+342050.00ns INFO     cocotb                             [TEST] Wait for test completion

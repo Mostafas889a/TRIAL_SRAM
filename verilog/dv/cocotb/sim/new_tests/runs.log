@@ -1,7 +1,7 @@
 Test                               status     start           end             duration      p/f      seed       
 RTL-comprehensive_address_test     done       06:59:30(Sat)   07:15:13(Sat)   0:15:42.44    failed   1762005573
-RTL-access_type_test               running    07:15:13(Sat)   -               -             -        -         
-RTL-multi_bank_test                pending    -               -               -             -        -         
+RTL-access_type_test               done       07:15:13(Sat)   07:31:10(Sat)   0:15:57.49    failed   1762006514
+RTL-multi_bank_test                running    07:31:10(Sat)   -               -             -        -         
 
 
-Total: passed (0)   failed (1)   unknown (2)   elapsed time (0:15:42.49)
+Total: passed (0)   failed (2)   unknown (1)   elapsed time (0:31:39.98)

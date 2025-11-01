@@ -87,3 +87,56 @@ See docs: https://docs.pytest.org/en/stable/deprecations.html#applying-a-mark-to
 29999975.00ns WARNING  cocotb                             simulation are only 1800000 cycles away from TIMEOUT 
 44999975.00ns WARNING  cocotb                             simulation are only 1200000 cycles away from TIMEOUT 
 59999975.00ns WARNING  cocotb                             simulation are only 600000 cycles away from TIMEOUT 
+74999975.00ns WARNING  cocotb                             simulation are only 0 cycles away from TIMEOUT 
+74999975.00ns ERROR    ..tb.Task 0.Timeout._timeout_check Exception raised by this forked coroutine
+74999975.00ns INFO     cocotb.regression                  report_test.<locals>.wrapper_func failed
+                                                          Traceback (most recent call last):
+                                                            File "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/caravel_cocotb/interfaces/common_functions/Timeout.py", line 31, in _timeout_check
+                                                              raise SimTimeoutError(
+                                                          cocotb.result.SimTimeoutError: simulation exceeds the max number of cycles 3000000
+74999975.00ns INFO     cocotb.regression                  *****************************************************************************************************************************************************
+                                                          ** TEST                                                                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                          *****************************************************************************************************************************************************
+                                                          ** caravel_cocotb.interfaces.common_functions.test_functions.report_test.<locals>.wrapper_func   FAIL    74999975.00         955.89      78460.51  **
+                                                          *****************************************************************************************************************************************************
+                                                          ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                                          74999975.00         956.10      78443.41  **
+                                                          *****************************************************************************************************************************************************
+                                                          
+Reading firmware.hex
+firmware.hex loaded into memory
+Memory 5 bytes = 0x6f 0x00 0x00 0x0b 0x13
+VCD info: dumpfile waves.vcd opened for output.
+===INFO=== (cftssc) : Writing X to whole memory:pwroff_mode=0 mem_x=0 undefined_mode=1 in instance caravel_top.uut.chip_core.mprj.mprj.sram0_inst.i_sram at                 1000
+===INFO=== (cftssc) : Writing X to whole memory:pwroff_mode=0 mem_x=0 undefined_mode=1 in instance caravel_top.uut.chip_core.mprj.mprj.sram1_inst.i_sram at                 1000
+===NOTE=== (efsram) : Undefined state in CF_SRAM_00128x032_008_18: vpwra= 1 vpwrp=1 TM=0 SM=0 WLOFF=0 in instance caravel_top.uut.chip_core.mprj.mprj.sram0_inst.i_sram at time=                1000
+===NOTE=== (efsram) : Undefined state in CF_SRAM_00128x032_008_18: vpwra= 1 vpwrp=1 TM=0 SM=0 WLOFF=0 in instance caravel_top.uut.chip_core.mprj.mprj.sram1_inst.i_sram at time=                1000
+ ===WARNING=== sky130_fd_io__top_xres4v2 :  Width of Input pulse for PAD input (= 225.00 ns)  is found to be in the range:  50 ns - 600 ns. In this range, the delay and pulse suppression of the input pulse are PVT dependent. : caravel_top.uut.padframe.resetb_pad       225
+ ===WARNING=== sky130_fd_io__top_xres4v2 :  Width of Input pulse for PAD input (= 300.00 ns)  is found to be in the range:  50 ns - 600 ns. In this range, the delay and pulse suppression of the input pulse are PVT dependent. : caravel_top.uut.padframe.resetb_pad       525
+ ===WARNING=== sky130_fd_io__top_xres4v2 :  Width of Input pulse for PAD input (= 500.00 ns)  is found to be in the range:  50 ns - 600 ns. In this range, the delay and pulse suppression of the input pulse are PVT dependent. : caravel_top.uut.padframe.resetb_pad      1025
+[91mFail[0m: Test RTL-access_type_test has Failed for more info refer to [96m/workspace/TRIAL_SRAM/verilog/dv/cocotb/sim/new_tests/RTL-access_type_test/access_type_test.log[0m
+Start running test: [94m RTL-multi_bank_test [0m
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 12.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1762007472
+/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/libtmux/pytest_plugin.py:48: PytestRemovedIn9Warning: Marks applied to fixtures have no effect
+See docs: https://docs.pytest.org/en/stable/deprecations.html#applying-a-mark-to-a-fixture-function
+  @pytest.mark.skipif(USING_ZSH, reason="Using ZSH")
+     0.00ns INFO     cocotb.regression                  Found test caravel_cocotb.interfaces.common_functions.test_functions.report_test.<locals>.wrapper_func
+     0.00ns INFO     cocotb.regression                  running report_test.<locals>.wrapper_func (1/1)
+/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/caravel_cocotb/interfaces/common_functions/Timeout.py:19: DeprecationWarning: This method is now private.
+  cocotb.scheduler.add(self._timeout_check())
+/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/caravel_cocotb/interfaces/common_functions/test_functions.py:63: DeprecationWarning: This method is now private.
+  cocotb.scheduler.add(max_num_error(num_error, caravelEnv.clk))
+     0.00ns INFO     cocotb                              [caravel] start powering up
+   225.00ns INFO     cocotb                              [caravel] power up -> connect vdd
+   225.00ns INFO     cocotb                              [caravel] power up -> connect vcc
+   475.00ns INFO     cocotb                              [caravel] disable housekeeping SPI transmission
+   525.00ns INFO     cocotb                              [caravel] start resetting
+  1050.00ns INFO     cocotb                              [caravel] finish resetting
+  1325.00ns INFO     cocotb                             [TEST] Start multi-bank test (same word address in each bank)
+  1325.00ns INFO     cocotb                              [caravel] release housekeeping SPI transmission
+  1350.00ns INFO     cocotb                             [TEST] Wait for GPIO pulse indicating test start
+342050.00ns INFO     cocotb                             [TEST] Test started - testing bank addressing
+342050.00ns INFO     cocotb                             [TEST] Wait for test completion
