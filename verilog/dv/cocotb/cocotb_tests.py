@@ -1,6 +1,11 @@
-from sram0_basic_test.sram0_basic_test import sram0_basic_test
-from sram1_basic_test.sram1_basic_test import sram1_basic_test
-from sram1_minimal_test.sram1_minimal_test import sram1_minimal_test
-from sram1_debug_test.sram1_debug_test import sram1_debug_test
-from dual_sram_test.dual_sram_test import dual_sram_test
-from system_integration_test.system_integration_test import system_integration_test
+from caravel_cocotb.tests.common_functions.test_functions import *
+from caravel_cocotb.tests.housekeeping.housekeeping import *
+
+def register_tests(dut):
+    tests = []
+    
+    tests.append(('comprehensive_address_test', 'comprehensive_address_test/comprehensive_address_test.py', 'comprehensive_address_test/comprehensive_address_test.c', {'sim': ['RTL', 'GL', 'GL_SDF']}))
+    tests.append(('access_type_test', 'access_type_test/access_type_test.py', 'access_type_test/access_type_test.c', {'sim': ['RTL', 'GL', 'GL_SDF']}))
+    tests.append(('multi_bank_test', 'multi_bank_test/multi_bank_test.py', 'multi_bank_test/multi_bank_test.c', {'sim': ['RTL', 'GL', 'GL_SDF']}))
+    
+    return tests
