@@ -9,3 +9,17 @@
   1350.00ns INFO     cocotb                             [TEST] Wait for management GPIO pulse (firmware ready)
 412725.00ns INFO     cocotb                             [TEST] firmware ready
 412725.00ns INFO     cocotb                             [TEST] Wait for test result
+4999975.00ns WARNING  cocotb                             simulation are only 800000 cycles away from TIMEOUT 
+8383300.00ns INFO     cocotb                             [TEST] Test passed
+8383300.00ns INFO     cocotb                             [TEST] Dual SRAM test PASSED
+8383300.00ns INFO     cocotb                             Test passed with (0)criticals (0)errors (1)warnings 
+8383300.00ns INFO     cocotb                             Cycles consumed = 335332 recommened timeout = 368866 cycles
+8383300.00ns INFO     cocotb.regression                  report_test.<locals>.wrapper_func passed
+8383300.00ns INFO     cocotb.regression                  *****************************************************************************************************************************************************
+                                                         ** TEST                                                                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                         *****************************************************************************************************************************************************
+                                                         ** caravel_cocotb.interfaces.common_functions.test_functions.report_test.<locals>.wrapper_func   PASS     8383300.00         116.93      71691.99  **
+                                                         *****************************************************************************************************************************************************
+                                                         ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                                           8383300.00         117.15      71563.40  **
+                                                         *****************************************************************************************************************************************************
+                                                         
