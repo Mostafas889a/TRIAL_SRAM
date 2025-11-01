@@ -11,3 +11,4 @@
 368450.00ns INFO     cocotb                             [TEST] Wait for test completion
 14999975.00ns WARNING  cocotb                             simulation are only 2400000 cycles away from TIMEOUT 
 29999975.00ns WARNING  cocotb                             simulation are only 1800000 cycles away from TIMEOUT 
+44999975.00ns WARNING  cocotb                             simulation are only 1200000 cycles away from TIMEOUT 
