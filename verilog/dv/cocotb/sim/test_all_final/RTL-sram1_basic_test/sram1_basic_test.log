@@ -11,3 +11,13 @@
 412725.00ns INFO     cocotb                             [TEST] Wait for test result
 4999975.00ns WARNING  cocotb                             simulation are only 800000 cycles away from TIMEOUT 
 9999975.00ns WARNING  cocotb                             simulation are only 600000 cycles away from TIMEOUT 
+13740950.00ns ERROR    cocotb.scheduler                   Failing test at simulator request before test run completion: Simulator shut down prematurely
+13740950.00ns ERROR    cocotb.regression                  Test error has lead to simulator shutting us down
+13740950.00ns INFO     cocotb.regression                  *****************************************************************************************************************************************************
+                                                          ** TEST                                                                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                          *****************************************************************************************************************************************************
+                                                          ** caravel_cocotb.interfaces.common_functions.test_functions.report_test.<locals>.wrapper_func   FAIL    13740950.00         158.46      86717.74  **
+                                                          *****************************************************************************************************************************************************
+                                                          ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                                          13740950.00         158.67      86600.03  **
+                                                          *****************************************************************************************************************************************************
+                                                          
