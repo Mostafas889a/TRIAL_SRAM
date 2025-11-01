@@ -9,6 +9,13 @@
   1350.00ns INFO     cocotb                             [TEST] Wait for management GPIO pulse (firmware ready)
 430325.00ns INFO     cocotb                             [TEST] firmware ready
 430325.00ns INFO     cocotb                             [TEST] Wait for test result
-4999975.00ns WARNING  cocotb                             simulation are only 800000 cycles away from TIMEOUT 
-9999975.00ns WARNING  cocotb                             simulation are only 600000 cycles away from TIMEOUT 
-14999975.00ns WARNING  cocotb                             simulation are only 400000 cycles away from TIMEOUT 
+4325250.00ns ERROR    cocotb.scheduler                   Failing test at simulator request before test run completion: Simulator shut down prematurely
+4325250.00ns ERROR    cocotb.regression                  Test error has lead to simulator shutting us down
+4325250.00ns INFO     cocotb.regression                  *****************************************************************************************************************************************************
+                                                         ** TEST                                                                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                         *****************************************************************************************************************************************************
+                                                         ** caravel_cocotb.interfaces.common_functions.test_functions.report_test.<locals>.wrapper_func   FAIL     4325250.00          56.48      76577.40  **
+                                                         *****************************************************************************************************************************************************
+                                                         ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                                           4325250.00          56.71      76264.33  **
+                                                         *****************************************************************************************************************************************************
+                                                         

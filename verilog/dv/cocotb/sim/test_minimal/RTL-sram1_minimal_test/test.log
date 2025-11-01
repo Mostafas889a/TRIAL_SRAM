@@ -4,7 +4,7 @@ command:cd /workspace/TRIAL_SRAM/verilog/dv/cocotb/sim/test_minimal/RTL-sram1_mi
      -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
      0.00ns INFO     cocotb                             Running on Icarus Verilog version 12.0 (stable)
      0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/cocotb
-     0.00ns INFO     cocotb                             Seeding Python random module with 1761992340
+     0.00ns INFO     cocotb                             Seeding Python random module with 1761992608
 /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/libtmux/pytest_plugin.py:48: PytestRemovedIn9Warning: Marks applied to fixtures have no effect
 See docs: https://docs.pytest.org/en/stable/deprecations.html#applying-a-mark-to-a-fixture-function
   @pytest.mark.skipif(USING_ZSH, reason="Using ZSH")
