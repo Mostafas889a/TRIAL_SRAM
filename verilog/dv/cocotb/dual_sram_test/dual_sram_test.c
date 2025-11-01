@@ -1,7 +1,7 @@
 #include <firmware_apis.h>
 
-#define SRAM0_OFFSET 0
-#define SRAM1_OFFSET 4096
+#define SRAM0_BASE 0x30000000
+#define SRAM1_BASE 0x30010000
 #define TEST_SIZE 128
 
 static void send_pulse(int count);
@@ -19,13 +19,17 @@ void main(void) {
     int pass = 1;
     
     for (int i = 0; i < TEST_SIZE; i++) {
-        USER_writeWord(0xAAAAAAAA + i, SRAM0_OFFSET + i);
-        USER_writeWord(0x55555555 + i, SRAM1_OFFSET + i);
+        uint32_t sram0_addr = SRAM0_BASE + (i << 2);
+        uint32_t sram1_addr = SRAM1_BASE + (i << 2);
+        USER_writeWord(0xAAAAAAAA + i, sram0_addr);
+        USER_writeWord(0x55555555 + i, sram1_addr);
     }
     
     for (int i = 0; i < TEST_SIZE; i++) {
-        uint32_t sram0_val = USER_readWord(SRAM0_OFFSET + i);
-        uint32_t sram1_val = USER_readWord(SRAM1_OFFSET + i);
+        uint32_t sram0_addr = SRAM0_BASE + (i << 2);
+        uint32_t sram1_addr = SRAM1_BASE + (i << 2);
+        uint32_t sram0_val = USER_readWord(sram0_addr);
+        uint32_t sram1_val = USER_readWord(sram1_addr);
         
         if (sram0_val != (0xAAAAAAAA + i) || sram1_val != (0x55555555 + i)) {
             pass = 0;

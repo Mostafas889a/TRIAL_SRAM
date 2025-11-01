@@ -1,6 +1,6 @@
 #include <firmware_apis.h>
 
-#define SRAM1_OFFSET 4096
+#define SRAM1_BASE 0x30010000
 #define TEST_SIZE 256
 
 static void send_pulse(int count);
@@ -19,12 +19,14 @@ void main(void) {
     
     for (int i = 0; i < TEST_SIZE; i++) {
         uint32_t test_data = 0x5A5A5A5A + i;
-        USER_writeWord(test_data, SRAM1_OFFSET + i);
+        uint32_t addr = SRAM1_BASE + (i << 2);
+        USER_writeWord(test_data, addr);
     }
     
     for (int i = 0; i < TEST_SIZE; i++) {
         uint32_t expected = 0x5A5A5A5A + i;
-        uint32_t read_val = USER_readWord(SRAM1_OFFSET + i);
+        uint32_t addr = SRAM1_BASE + (i << 2);
+        uint32_t read_val = USER_readWord(addr);
         if (read_val != expected) {
             pass = 0;
             break;
