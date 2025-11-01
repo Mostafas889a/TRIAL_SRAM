@@ -93,12 +93,12 @@ TRIAL_SRAM/
 ## Development Milestones
 
 - [x] Project setup and template initialization
-- [ ] IP linking and integration
-- [ ] Documentation creation (register_map, pad_map, integration_notes)
-- [ ] RTL development (user_project, user_project_wrapper)
-- [ ] Verification test development
-- [ ] Verification execution and evaluation
-- [ ] Final documentation and retrospective
+- [x] IP linking and integration (CF_SRAM_1024x32 x2)
+- [x] Documentation creation (register_map, pad_map, integration_notes)
+- [x] RTL development (user_project, user_project_wrapper)
+- [x] Verification test development (4 tests implemented)
+- [x] Verification execution and evaluation
+- [x] Final documentation and retrospective
 
 ## Getting Started
 
@@ -112,22 +112,44 @@ TRIAL_SRAM/
 ### Quick Start
 
 ```bash
-# Link IP cores
+# Link IP cores (already done)
 python /nc/agent_tools/ipm_linker/ipm_linker.py --file ip/link_IPs.json --project-root /workspace/TRIAL_SRAM
 
-# Verify RTL (after development)
-make verify
+# Run verification tests
+cd verilog/dv/cocotb
+caravel_cocotb -t sram0_basic_test sram1_basic_test dual_sram_test system_integration_test -sim RTL
 
-# Run synthesis (after verification passes)
-make openlane
+# Run synthesis (when ready)
+cd /workspace/TRIAL_SRAM
+openlane openlane/user_project_wrapper/config.json
 ```
 
-## Status
+## Test Results
 
-**Current Stage**: Project Setup  
-**Overall Progress**: 7% (1/14 tasks completed)
+**All Core Tests PASSING** ✅
 
-See `docs/` for detailed documentation as it becomes available.
+| Test | Status | Duration | Coverage |
+|------|--------|----------|----------|
+| sram0_basic_test | ✅ PASS | 13.3s | 256 words |
+| sram1_basic_test | ✅ PASS | 12.3s | 256 words |
+| dual_sram_test | ✅ PASS | 118.5s | 128 words each |
+| system_integration_test | ✅ PASS | 11.9s | End-to-end |
+
+**Total**: 4/4 tests passing (100% pass rate)  
+**Duration**: ~2.5 minutes for full test suite
+
+See `docs/verification_handoff.md` and `docs/verification_evaluation_report.md` for detailed test analysis.
+
+## Documentation
+
+All project documentation is available in the `docs/` directory:
+
+- **register_map.md** - Complete SRAM register interfaces and address mapping
+- **pad_map.md** - IO pad configuration (no external IOs in this design)
+- **integration_notes.md** - Clocking, reset, bus timing, and simulation notes
+- **verification_handoff.md** - Comprehensive verification handoff document
+- **verification_evaluation_report.md** - Independent evaluation of test coverage
+- **retrospective.md** - Project retrospective with lessons learned
 
 ## License
 
