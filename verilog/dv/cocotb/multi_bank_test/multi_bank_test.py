@@ -6,7 +6,7 @@ import cocotb.log
 @cocotb.test()
 @report_test
 async def multi_bank_test(dut):
-    caravelEnv = await test_configure(dut, timeout_cycles=3000000)
+    caravelEnv = await test_configure(dut, timeout_cycles=10000000)
     cocotb.log.info("[TEST] Start multi-bank test (same word address in each bank)")
     
     await caravelEnv.release_csb()

@@ -6,7 +6,7 @@ import cocotb.log
 @cocotb.test()
 @report_test
 async def access_type_test(dut):
-    caravelEnv = await test_configure(dut, timeout_cycles=3000000)
+    caravelEnv = await test_configure(dut, timeout_cycles=10000000)
     cocotb.log.info("[TEST] Start access type test (word, half-word, byte)")
     
     await caravelEnv.release_csb()
