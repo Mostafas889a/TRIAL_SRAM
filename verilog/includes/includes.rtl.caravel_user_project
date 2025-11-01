@@ -17,11 +17,10 @@
 -v $(USER_PROJECT_VERILOG)/rtl/user_project_wrapper.v
 -v $(USER_PROJECT_VERILOG)/rtl/user_project.v
 
-# CF_SRAM_1024x32 IP includes (RTL simulation with stub model)
-# Note: We use our own wrapper (CF_SRAM_1024x32_sim.v) instead of the IP's wrapper
-# because the IP wrapper expects USE_PG_PIN but we only define USE_POWER_PINS
--v $(USER_PROJECT_VERILOG)/../ip/CF_SRAM_1024x32/hdl/CF_SRAM_1024x32_stub.v
--v $(USER_PROJECT_VERILOG)/rtl/CF_SRAM_1024x32_sim.v
+# CF_SRAM_1024x32 IP includes (RTL simulation with behavioral model)
+# Using IP's wrapper which handles USE_POWER_PINS vs USE_PG_PIN conversion
+-v $(USER_PROJECT_VERILOG)/../ip/CF_SRAM_1024x32/hdl/CF_SRAM_1024x32.v
+-v $(USER_PROJECT_VERILOG)/../ip/CF_SRAM_1024x32/hdl/beh_models/CF_SRAM_1024x32.v
 -v $(USER_PROJECT_VERILOG)/../ip/CF_SRAM_1024x32/hdl/controllers/ram_controller_wb.v
 -v $(USER_PROJECT_VERILOG)/../ip/CF_SRAM_1024x32/hdl/bus_wrapper/CF_SRAM_1024x32_wb_wrapper.v
 

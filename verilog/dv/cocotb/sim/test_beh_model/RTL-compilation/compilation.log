@@ -1,0 +1,16 @@
+command:cd /workspace/TRIAL_SRAM/verilog/dv/cocotb/sim/test_beh_model/RTL-compilation &&iverilog -g2012 -Ttyp  -DUSE_POWER_PINS -DUNIT_DELAY=#1 -DCOCOTB_SIM -DFUNCTIONAL -DWAVE_GEN -DIVERILOG -Dsky130 -DCPU_TYPE_VexRISC -DRUN_PATH=\"/workspace/TRIAL_SRAM/verilog/dv/cocotb\" -DTAG=\"test_beh_model\" -DMCW_ROOT=\"/nc/templates/mgmt_core_wrapper\" -DUSER_PROJECT_ROOT=\"/workspace/TRIAL_SRAM\" -DCARAVEL_ROOT=\"/nc/templates/caravel\" -DSIM_PATH=\"/workspace/TRIAL_SRAM/verilog/dv/cocotb/sim/\" -DSIM=\"RTL\" -DTESTNAME=\"sram0_basic_test\" -DFTESTNAME=\"RTL-sram0_basic_test\" -DSIM_DIR=\"/workspace/TRIAL_SRAM/verilog/dv/cocotb/sim/test_beh_model\" -DCORNER_nom  -I /workspace/TRIAL_SRAM/verilog/rtl -o /workspace/TRIAL_SRAM/verilog/dv/cocotb/sim/test_beh_model/RTL-compilation/sim.vvp -s caravel_top /nc/templates/caravel/verilog/rtl/toplevel_cocotb.v
+
+/nc/templates/caravel/verilog/rtl/caravel.v:236: warning: input port clock is coerced to inout.
+/workspace/TRIAL_SRAM/verilog/../ip/CF_SRAM_1024x32/hdl/bus_wrapper/CF_SRAM_1024x32_wb_wrapper.v:106: error: port ``vgnd'' is not a port of i_sram.
+/workspace/TRIAL_SRAM/verilog/../ip/CF_SRAM_1024x32/hdl/bus_wrapper/CF_SRAM_1024x32_wb_wrapper.v:106: error: port ``vnb'' is not a port of i_sram.
+/workspace/TRIAL_SRAM/verilog/../ip/CF_SRAM_1024x32/hdl/bus_wrapper/CF_SRAM_1024x32_wb_wrapper.v:106: error: port ``vpb'' is not a port of i_sram.
+/workspace/TRIAL_SRAM/verilog/../ip/CF_SRAM_1024x32/hdl/bus_wrapper/CF_SRAM_1024x32_wb_wrapper.v:106: error: port ``vpwra'' is not a port of i_sram.
+/workspace/TRIAL_SRAM/verilog/../ip/CF_SRAM_1024x32/hdl/bus_wrapper/CF_SRAM_1024x32_wb_wrapper.v:106: error: port ``vpwrm'' is not a port of i_sram.
+/workspace/TRIAL_SRAM/verilog/../ip/CF_SRAM_1024x32/hdl/bus_wrapper/CF_SRAM_1024x32_wb_wrapper.v:106: error: port ``vpwrp'' is not a port of i_sram.
+/workspace/TRIAL_SRAM/verilog/../ip/CF_SRAM_1024x32/hdl/bus_wrapper/CF_SRAM_1024x32_wb_wrapper.v:106: error: port ``vgnd'' is not a port of i_sram.
+/workspace/TRIAL_SRAM/verilog/../ip/CF_SRAM_1024x32/hdl/bus_wrapper/CF_SRAM_1024x32_wb_wrapper.v:106: error: port ``vnb'' is not a port of i_sram.
+/workspace/TRIAL_SRAM/verilog/../ip/CF_SRAM_1024x32/hdl/bus_wrapper/CF_SRAM_1024x32_wb_wrapper.v:106: error: port ``vpb'' is not a port of i_sram.
+/workspace/TRIAL_SRAM/verilog/../ip/CF_SRAM_1024x32/hdl/bus_wrapper/CF_SRAM_1024x32_wb_wrapper.v:106: error: port ``vpwra'' is not a port of i_sram.
+/workspace/TRIAL_SRAM/verilog/../ip/CF_SRAM_1024x32/hdl/bus_wrapper/CF_SRAM_1024x32_wb_wrapper.v:106: error: port ``vpwrm'' is not a port of i_sram.
+/workspace/TRIAL_SRAM/verilog/../ip/CF_SRAM_1024x32/hdl/bus_wrapper/CF_SRAM_1024x32_wb_wrapper.v:106: error: port ``vpwrp'' is not a port of i_sram.
+12 error(s) during elaboration.
