@@ -1,0 +1,8 @@
+Test                            status     start           end             duration      p/f      seed       
+RTL-sram0_basic_test            done       03:28:06(Sat)   03:28:20(Sat)   0:00:13.28    passed   1761992888
+RTL-sram1_basic_test            done       03:28:20(Sat)   03:28:32(Sat)   0:00:12.34    passed   1761992901
+RTL-dual_sram_test              running    03:28:32(Sat)   -               -             -        -         
+RTL-system_integration_test     pending    -               -               -             -        -         
+
+
+Total: passed (2)   failed (0)   unknown (2)   elapsed time (0:00:25.69)
