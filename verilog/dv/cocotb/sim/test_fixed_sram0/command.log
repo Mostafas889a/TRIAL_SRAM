@@ -1,2 +1,0 @@
-command used to run this sim:
-% /usr/local/bin/caravel_cocotb -t sram0_basic_test -tag test_fixed_sram0 -sim RTL

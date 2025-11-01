@@ -1,5 +1,0 @@
-Test                     status     start           end             duration      p/f      seed       
-RTL-sram0_basic_test     done       02:53:14(Sat)   02:53:15(Sat)   0:00:00.88    failed   unknown   
-
-
-Total: passed (0)   failed (1)   unknown (0)   elapsed time (0:00:00.93)

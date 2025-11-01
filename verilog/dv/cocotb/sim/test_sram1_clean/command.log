@@ -1,2 +1,0 @@
-command used to run this sim:
-% /usr/local/bin/caravel_cocotb -t sram1_basic_test -tag test_sram1_clean -sim RTL

@@ -1,8 +1,0 @@
-<testsuites name="results">
-  <testsuite name="all" package="all">
-    <property name="random_seed" value="1761990044" />
-    <testcase name="report_test.&lt;locals&gt;.wrapper_func" classname="caravel_cocotb.interfaces.common_functions.test_functions" file="/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/caravel_cocotb/interfaces/common_functions/test_functions.py" lineno="101" time="448.8969421386719" sim_time_ns="24999975.001" ratio_time="55692.01447863078">
-      <failure message="Test failed with RANDOM_SEED=1761990044" />
-    </testcase>
-  </testsuite>
-</testsuites>
