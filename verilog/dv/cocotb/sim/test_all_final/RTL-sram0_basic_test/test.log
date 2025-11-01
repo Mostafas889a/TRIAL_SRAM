@@ -25,3 +25,27 @@ See docs: https://docs.pytest.org/en/stable/deprecations.html#applying-a-mark-to
   1350.00ns INFO     cocotb                             [TEST] Wait for management GPIO pulse (firmware ready)
 412725.00ns INFO     cocotb                             [TEST] firmware ready
 412725.00ns INFO     cocotb                             [TEST] Wait for test result
+1236525.00ns INFO     cocotb                             [TEST] Test passed
+1236525.00ns INFO     cocotb                             [TEST] SRAM0 basic test PASSED
+1236525.00ns INFO     cocotb                             Test passed with (0)criticals (0)errors (0)warnings 
+1236525.00ns INFO     cocotb                             Cycles consumed = 49461 recommened timeout = 54408 cycles
+1236525.00ns INFO     cocotb.regression                  report_test.<locals>.wrapper_func passed
+1236525.00ns INFO     cocotb.regression                  *****************************************************************************************************************************************************
+                                                         ** TEST                                                                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                         *****************************************************************************************************************************************************
+                                                         ** caravel_cocotb.interfaces.common_functions.test_functions.report_test.<locals>.wrapper_func   PASS     1236525.00          17.35      71255.75  **
+                                                         *****************************************************************************************************************************************************
+                                                         ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                                           1236525.00          17.56      70412.36  **
+                                                         *****************************************************************************************************************************************************
+                                                         
+Reading firmware.hex
+firmware.hex loaded into memory
+Memory 5 bytes = 0x6f 0x00 0x00 0x0b 0x13
+VCD info: dumpfile waves.vcd opened for output.
+===INFO=== (cftssc) : Writing X to whole memory:pwroff_mode=0 mem_x=0 undefined_mode=1 in instance caravel_top.uut.chip_core.mprj.mprj.sram0_inst.i_sram at                 1000
+===INFO=== (cftssc) : Writing X to whole memory:pwroff_mode=0 mem_x=0 undefined_mode=1 in instance caravel_top.uut.chip_core.mprj.mprj.sram1_inst.i_sram at                 1000
+===NOTE=== (efsram) : Undefined state in CF_SRAM_00128x032_008_18: vpwra= 1 vpwrp=1 TM=0 SM=0 WLOFF=0 in instance caravel_top.uut.chip_core.mprj.mprj.sram0_inst.i_sram at time=                1000
+===NOTE=== (efsram) : Undefined state in CF_SRAM_00128x032_008_18: vpwra= 1 vpwrp=1 TM=0 SM=0 WLOFF=0 in instance caravel_top.uut.chip_core.mprj.mprj.sram1_inst.i_sram at time=                1000
+ ===WARNING=== sky130_fd_io__top_xres4v2 :  Width of Input pulse for PAD input (= 225.00 ns)  is found to be in the range:  50 ns - 600 ns. In this range, the delay and pulse suppression of the input pulse are PVT dependent. : caravel_top.uut.padframe.resetb_pad       225
+ ===WARNING=== sky130_fd_io__top_xres4v2 :  Width of Input pulse for PAD input (= 300.00 ns)  is found to be in the range:  50 ns - 600 ns. In this range, the delay and pulse suppression of the input pulse are PVT dependent. : caravel_top.uut.padframe.resetb_pad       525
+ ===WARNING=== sky130_fd_io__top_xres4v2 :  Width of Input pulse for PAD input (= 500.00 ns)  is found to be in the range:  50 ns - 600 ns. In this range, the delay and pulse suppression of the input pulse are PVT dependent. : caravel_top.uut.padframe.resetb_pad      1025
