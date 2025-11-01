@@ -1,4 +1,5 @@
 from sram0_basic_test.sram0_basic_test import sram0_basic_test
 from sram1_basic_test.sram1_basic_test import sram1_basic_test
+from sram1_minimal_test.sram1_minimal_test import sram1_minimal_test
 from dual_sram_test.dual_sram_test import dual_sram_test
 from system_integration_test.system_integration_test import system_integration_test
