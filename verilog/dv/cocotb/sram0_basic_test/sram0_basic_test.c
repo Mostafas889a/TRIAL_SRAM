@@ -19,14 +19,14 @@ void main(void) {
     
     for (int i = 0; i < TEST_SIZE; i++) {
         uint32_t test_data = 0xA5A5A5A5 + i;
-        uint32_t addr = SRAM0_BASE + (i << 2);
-        USER_writeWord(test_data, addr);
+        uint32_t word_offset = ((SRAM0_BASE - 0x30000000) >> 2) + i;
+        USER_writeWord(test_data, word_offset);
     }
     
     for (int i = 0; i < TEST_SIZE; i++) {
         uint32_t expected = 0xA5A5A5A5 + i;
-        uint32_t addr = SRAM0_BASE + (i << 2);
-        uint32_t read_val = USER_readWord(addr);
+        uint32_t word_offset = ((SRAM0_BASE - 0x30000000) >> 2) + i;
+        uint32_t read_val = USER_readWord(word_offset);
         if (read_val != expected) {
             pass = 0;
             break;

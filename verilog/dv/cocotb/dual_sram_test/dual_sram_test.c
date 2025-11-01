@@ -19,17 +19,17 @@ void main(void) {
     int pass = 1;
     
     for (int i = 0; i < TEST_SIZE; i++) {
-        uint32_t sram0_addr = SRAM0_BASE + (i << 2);
-        uint32_t sram1_addr = SRAM1_BASE + (i << 2);
-        USER_writeWord(0xAAAAAAAA + i, sram0_addr);
-        USER_writeWord(0x55555555 + i, sram1_addr);
+        uint32_t sram0_offset = ((SRAM0_BASE - 0x30000000) >> 2) + i;
+        uint32_t sram1_offset = ((SRAM1_BASE - 0x30000000) >> 2) + i;
+        USER_writeWord(0xAAAAAAAA + i, sram0_offset);
+        USER_writeWord(0x55555555 + i, sram1_offset);
     }
     
     for (int i = 0; i < TEST_SIZE; i++) {
-        uint32_t sram0_addr = SRAM0_BASE + (i << 2);
-        uint32_t sram1_addr = SRAM1_BASE + (i << 2);
-        uint32_t sram0_val = USER_readWord(sram0_addr);
-        uint32_t sram1_val = USER_readWord(sram1_addr);
+        uint32_t sram0_offset = ((SRAM0_BASE - 0x30000000) >> 2) + i;
+        uint32_t sram1_offset = ((SRAM1_BASE - 0x30000000) >> 2) + i;
+        uint32_t sram0_val = USER_readWord(sram0_offset);
+        uint32_t sram1_val = USER_readWord(sram1_offset);
         
         if (sram0_val != (0xAAAAAAAA + i) || sram1_val != (0x55555555 + i)) {
             pass = 0;
