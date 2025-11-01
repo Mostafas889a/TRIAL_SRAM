@@ -26,3 +26,4 @@ See docs: https://docs.pytest.org/en/stable/deprecations.html#applying-a-mark-to
 342025.00ns INFO     cocotb                             [TEST] Test started - testing different access types
 342025.00ns INFO     cocotb                             [TEST] Wait for test completion
 14999975.00ns WARNING  cocotb                             simulation are only 2400000 cycles away from TIMEOUT 
+29999975.00ns WARNING  cocotb                             simulation are only 1800000 cycles away from TIMEOUT 
