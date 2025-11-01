@@ -7,3 +7,6 @@
   1325.00ns INFO     cocotb                             [TEST] Start sram1_basic_test
   1325.00ns INFO     cocotb                              [caravel] release housekeeping SPI transmission
   1350.00ns INFO     cocotb                             [TEST] Wait for management GPIO pulse (firmware ready)
+412725.00ns INFO     cocotb                             [TEST] firmware ready
+412725.00ns INFO     cocotb                             [TEST] Wait for test result
+4999975.00ns WARNING  cocotb                             simulation are only 800000 cycles away from TIMEOUT 
