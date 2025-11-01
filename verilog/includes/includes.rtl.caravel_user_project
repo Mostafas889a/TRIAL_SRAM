@@ -19,6 +19,7 @@
 
 # CF_SRAM_1024x32 IP includes (stub model for RTL simulation)
 -v $(USER_PROJECT_VERILOG)/../ip/CF_SRAM_1024x32/hdl/CF_SRAM_1024x32_stub.v
+-v $(USER_PROJECT_VERILOG)/rtl/CF_SRAM_1024x32_sim.v
 -v $(USER_PROJECT_VERILOG)/../ip/CF_SRAM_1024x32/hdl/controllers/ram_controller_wb.v
 -v $(USER_PROJECT_VERILOG)/../ip/CF_SRAM_1024x32/hdl/bus_wrapper/CF_SRAM_1024x32_wb_wrapper.v
 
