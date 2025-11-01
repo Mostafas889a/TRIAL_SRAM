@@ -4,9 +4,8 @@
    475.00ns INFO     cocotb                              [caravel] disable housekeeping SPI transmission
    525.00ns INFO     cocotb                              [caravel] start resetting
   1050.00ns INFO     cocotb                              [caravel] finish resetting
-  1325.00ns INFO     cocotb                             [TEST] Start multi-bank test (same word address in each bank)
+  1325.00ns INFO     cocotb                             [TEST] Start comprehensive address coverage test
   1325.00ns INFO     cocotb                              [caravel] release housekeeping SPI transmission
   1350.00ns INFO     cocotb                             [TEST] Wait for GPIO pulse indicating test start
-342050.00ns INFO     cocotb                             [TEST] Test started - testing bank addressing
-342050.00ns INFO     cocotb                             [TEST] Wait for test completion
-14999975.00ns WARNING  cocotb                             simulation are only 2400000 cycles away from TIMEOUT 
+368450.00ns INFO     cocotb                             [TEST] Test started - writing corner addresses
+368450.00ns INFO     cocotb                             [TEST] Wait for test completion

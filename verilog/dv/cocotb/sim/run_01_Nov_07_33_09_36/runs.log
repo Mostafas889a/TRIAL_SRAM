@@ -1,0 +1,7 @@
+Test                               status     start           end             duration      p/f      seed       
+RTL-comprehensive_address_test     running    07:33:09(Sat)   -               -             -        -         
+RTL-access_type_test               pending    -               -               -             -        -         
+RTL-multi_bank_test                pending    -               -               -             -        -         
+
+
+Total: passed (0)   failed (0)   unknown (3)   elapsed time (0:00:00.09)
