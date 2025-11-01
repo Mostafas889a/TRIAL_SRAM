@@ -1,0 +1,28 @@
+Run tag: new_tests 
+Start running test: [94m RTL-comprehensive_address_test [0m
+[96mCompiling as sim.vvp not found[0m
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 12.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1762005573
+/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/libtmux/pytest_plugin.py:48: PytestRemovedIn9Warning: Marks applied to fixtures have no effect
+See docs: https://docs.pytest.org/en/stable/deprecations.html#applying-a-mark-to-a-fixture-function
+  @pytest.mark.skipif(USING_ZSH, reason="Using ZSH")
+     0.00ns INFO     cocotb.regression                  Found test caravel_cocotb.interfaces.common_functions.test_functions.report_test.<locals>.wrapper_func
+     0.00ns INFO     cocotb.regression                  running report_test.<locals>.wrapper_func (1/1)
+/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/caravel_cocotb/interfaces/common_functions/Timeout.py:19: DeprecationWarning: This method is now private.
+  cocotb.scheduler.add(self._timeout_check())
+/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/caravel_cocotb/interfaces/common_functions/test_functions.py:63: DeprecationWarning: This method is now private.
+  cocotb.scheduler.add(max_num_error(num_error, caravelEnv.clk))
+     0.00ns INFO     cocotb                              [caravel] start powering up
+   225.00ns INFO     cocotb                              [caravel] power up -> connect vdd
+   225.00ns INFO     cocotb                              [caravel] power up -> connect vcc
+   475.00ns INFO     cocotb                              [caravel] disable housekeeping SPI transmission
+   525.00ns INFO     cocotb                              [caravel] start resetting
+  1050.00ns INFO     cocotb                              [caravel] finish resetting
+  1325.00ns INFO     cocotb                             [TEST] Start comprehensive address coverage test
+  1325.00ns INFO     cocotb                              [caravel] release housekeeping SPI transmission
+  1350.00ns INFO     cocotb                             [TEST] Wait for GPIO pulse indicating test start
+368450.00ns INFO     cocotb                             [TEST] Test started - writing corner addresses
+368450.00ns INFO     cocotb                             [TEST] Wait for test completion

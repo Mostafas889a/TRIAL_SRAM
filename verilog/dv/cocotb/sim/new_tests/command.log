@@ -1,0 +1,2 @@
+command used to run this sim:
+% /usr/local/bin/caravel_cocotb -t comprehensive_address_test access_type_test multi_bank_test -tag new_tests -sim RTL

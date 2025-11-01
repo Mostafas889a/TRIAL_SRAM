@@ -1,28 +1,102 @@
-Run tag: test_run 
-Start running test: [94m RTL-sram0_basic_test [0m
+Run tag: new_tests 
+Start running test: [94m RTL-comprehensive_address_test [0m
 [96mCompiling as sim.vvp not found[0m
      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python
      -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
      0.00ns INFO     cocotb                             Running on Icarus Verilog version 12.0 (stable)
      0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/cocotb
-     0.00ns INFO     cocotb                             Seeding Python random module with 1761989731
+     0.00ns INFO     cocotb                             Seeding Python random module with 1762005551
 /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/libtmux/pytest_plugin.py:48: PytestRemovedIn9Warning: Marks applied to fixtures have no effect
 See docs: https://docs.pytest.org/en/stable/deprecations.html#applying-a-mark-to-a-fixture-function
   @pytest.mark.skipif(USING_ZSH, reason="Using ZSH")
-     0.00ns INFO     cocotb.regression                  Found test caravel_cocotb.interfaces.common_functions.test_functions.report_test.<locals>.wrapper_func
-     0.00ns INFO     cocotb.regression                  running report_test.<locals>.wrapper_func (1/1)
-/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/caravel_cocotb/interfaces/common_functions/Timeout.py:19: DeprecationWarning: This method is now private.
-  cocotb.scheduler.add(self._timeout_check())
-/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/caravel_cocotb/interfaces/common_functions/test_functions.py:63: DeprecationWarning: This method is now private.
-  cocotb.scheduler.add(max_num_error(num_error, caravelEnv.clk))
-     0.00ns INFO     cocotb                              [caravel] start powering up
-   225.00ns INFO     cocotb                              [caravel] power up -> connect vdd
-   225.00ns INFO     cocotb                              [caravel] power up -> connect vcc
-   475.00ns INFO     cocotb                              [caravel] disable housekeeping SPI transmission
-   525.00ns INFO     cocotb                              [caravel] start resetting
-  1050.00ns INFO     cocotb                              [caravel] finish resetting
-  1325.00ns INFO     cocotb                             [TEST] Start sram0_basic_test
-  1325.00ns INFO     cocotb                              [caravel] release housekeeping SPI transmission
-  1350.00ns INFO     cocotb                             [TEST] Wait for management GPIO pulse (firmware ready)
-412725.00ns INFO     cocotb                             [TEST] firmware ready
-412725.00ns INFO     cocotb                             [TEST] Wait for test result
+     0.00ns CRITICAL cocotb.regression                  Failed to import module module_trail: No module named 'caravel_cocotb.tests'
+     0.00ns INFO     cocotb.regression                  MODULE variable was "module_trail"
+     0.00ns INFO     cocotb.regression                  Traceback (most recent call last):
+                                                          File "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/cocotb/regression.py", line 203, in _discover_tests
+                                                            module = _my_import(module_name)
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/cocotb/regression.py", line 72, in _my_import
+                                                            mod = __import__(name)
+                                                                  ^^^^^^^^^^^^^^^^
+                                                          File "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+                                                            exec(co, module.__dict__)
+                                                          File "/workspace/TRIAL_SRAM/verilog/dv/cocotb/sim/new_tests/RTL-comprehensive_address_test/module_trail.py", line 4, in <module>
+                                                            from cocotb_tests import *
+                                                          File "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+                                                            exec(co, module.__dict__)
+                                                          File "/workspace/TRIAL_SRAM/verilog/dv/cocotb/cocotb_tests.py", line 1, in <module>
+                                                            from caravel_cocotb.tests.common_functions.test_functions import *
+                                                        ModuleNotFoundError: No module named 'caravel_cocotb.tests'
+                                                        
+     0.00ns ERROR    cocotb                             No module named 'caravel_cocotb.tests'
+[91mError[0m: Fail to compile the verilog code for more info refer to [96m/workspace/TRIAL_SRAM/verilog/dv/cocotb/sim/new_tests/RTL-compilation/compilation.log[0m
+Start running test: [94m RTL-access_type_test [0m
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 12.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1762005553
+/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/libtmux/pytest_plugin.py:48: PytestRemovedIn9Warning: Marks applied to fixtures have no effect
+See docs: https://docs.pytest.org/en/stable/deprecations.html#applying-a-mark-to-a-fixture-function
+  @pytest.mark.skipif(USING_ZSH, reason="Using ZSH")
+     0.00ns CRITICAL cocotb.regression                  Failed to import module module_trail: No module named 'caravel_cocotb.tests'
+     0.00ns INFO     cocotb.regression                  MODULE variable was "module_trail"
+     0.00ns INFO     cocotb.regression                  Traceback (most recent call last):
+                                                          File "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/cocotb/regression.py", line 203, in _discover_tests
+                                                            module = _my_import(module_name)
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/cocotb/regression.py", line 72, in _my_import
+                                                            mod = __import__(name)
+                                                                  ^^^^^^^^^^^^^^^^
+                                                          File "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+                                                            exec(co, module.__dict__)
+                                                          File "/workspace/TRIAL_SRAM/verilog/dv/cocotb/sim/new_tests/RTL-access_type_test/module_trail.py", line 4, in <module>
+                                                            from cocotb_tests import *
+                                                          File "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+                                                            exec(co, module.__dict__)
+                                                          File "/workspace/TRIAL_SRAM/verilog/dv/cocotb/cocotb_tests.py", line 1, in <module>
+                                                            from caravel_cocotb.tests.common_functions.test_functions import *
+                                                        ModuleNotFoundError: No module named 'caravel_cocotb.tests'
+                                                        
+     0.00ns ERROR    cocotb                             No module named 'caravel_cocotb.tests'
+[91mError[0m: Fail to compile the verilog code for more info refer to [96m/workspace/TRIAL_SRAM/verilog/dv/cocotb/sim/new_tests/RTL-compilation/compilation.log[0m
+Start running test: [94m RTL-multi_bank_test [0m
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 12.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1762005555
+/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/libtmux/pytest_plugin.py:48: PytestRemovedIn9Warning: Marks applied to fixtures have no effect
+See docs: https://docs.pytest.org/en/stable/deprecations.html#applying-a-mark-to-a-fixture-function
+  @pytest.mark.skipif(USING_ZSH, reason="Using ZSH")
+     0.00ns CRITICAL cocotb.regression                  Failed to import module module_trail: No module named 'caravel_cocotb.tests'
+     0.00ns INFO     cocotb.regression                  MODULE variable was "module_trail"
+     0.00ns INFO     cocotb.regression                  Traceback (most recent call last):
+                                                          File "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/cocotb/regression.py", line 203, in _discover_tests
+                                                            module = _my_import(module_name)
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/cocotb/regression.py", line 72, in _my_import
+                                                            mod = __import__(name)
+                                                                  ^^^^^^^^^^^^^^^^
+                                                          File "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+                                                            exec(co, module.__dict__)
+                                                          File "/workspace/TRIAL_SRAM/verilog/dv/cocotb/sim/new_tests/RTL-multi_bank_test/module_trail.py", line 4, in <module>
+                                                            from cocotb_tests import *
+                                                          File "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/lib/python3.12/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+                                                            exec(co, module.__dict__)
+                                                          File "/workspace/TRIAL_SRAM/verilog/dv/cocotb/cocotb_tests.py", line 1, in <module>
+                                                            from caravel_cocotb.tests.common_functions.test_functions import *
+                                                        ModuleNotFoundError: No module named 'caravel_cocotb.tests'
+                                                        
+     0.00ns ERROR    cocotb                             No module named 'caravel_cocotb.tests'
+[91mError[0m: Fail to compile the verilog code for more info refer to [96m/workspace/TRIAL_SRAM/verilog/dv/cocotb/sim/new_tests/RTL-compilation/compilation.log[0m
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━┓                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+┃ Total                          ┃ Passed ┃ Failed        ┃ Unknown       ┃ duration   ┃        ┃         ┃                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━┩                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+│ 3                              │ 0      │ 3             │ 0             │ 0:00:05.85 │        │         │                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+│                                │        │               │               │            │        │         │                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+│ Test                           │ status │ start         │ end           │ duration   │ p/f    │ seed    │                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+│ RTL-comprehensive_address_test │ done   │ 06:59:09(Sat) │ 06:59:12(Sat) │ 0:00:02.57 │ failed │ unknown │                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+│ RTL-access_type_test           │ done   │ 06:59:12(Sat) │ 06:59:13(Sat) │ 0:00:01.62 │ failed │ unknown │                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+│ RTL-multi_bank_test            │ done   │ 06:59:13(Sat) │ 06:59:15(Sat) │ 0:00:01.59 │ failed │ unknown │                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+└────────────────────────────────┴────────┴───────────────┴───────────────┴────────────┴────────┴─────────┘                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
