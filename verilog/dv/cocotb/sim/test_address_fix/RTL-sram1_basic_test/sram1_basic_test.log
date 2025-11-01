@@ -1,0 +1,11 @@
+     0.00ns INFO     cocotb                              [caravel] start powering up
+   225.00ns INFO     cocotb                              [caravel] power up -> connect vdd
+   225.00ns INFO     cocotb                              [caravel] power up -> connect vcc
+   475.00ns INFO     cocotb                              [caravel] disable housekeeping SPI transmission
+   525.00ns INFO     cocotb                              [caravel] start resetting
+  1050.00ns INFO     cocotb                              [caravel] finish resetting
+  1325.00ns INFO     cocotb                             [TEST] Start sram1_basic_test
+  1325.00ns INFO     cocotb                              [caravel] release housekeeping SPI transmission
+  1350.00ns INFO     cocotb                             [TEST] Wait for management GPIO pulse (firmware ready)
+412725.00ns INFO     cocotb                             [TEST] firmware ready
+412725.00ns INFO     cocotb                             [TEST] Wait for test result

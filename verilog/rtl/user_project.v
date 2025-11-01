@@ -66,7 +66,7 @@ module user_project (
     .wbs_we_i(wbs_we_i),
     .wbs_sel_i(wbs_sel_i),
     .wbs_dat_i(wbs_dat_i),
-    .wbs_adr_i(wbs_adr_i),
+    .wbs_adr_i({16'h0, wbs_adr_i[15:0]}),
     .wbs_ack_o(sram0_ack),
     .wbs_dat_o(sram0_dat_o)
   );
@@ -85,7 +85,7 @@ module user_project (
     .wbs_we_i(wbs_we_i),
     .wbs_sel_i(wbs_sel_i),
     .wbs_dat_i(wbs_dat_i),
-    .wbs_adr_i(wbs_adr_i),
+    .wbs_adr_i({16'h0, wbs_adr_i[15:0]}),
     .wbs_ack_o(sram1_ack),
     .wbs_dat_o(sram1_dat_o)
   );
